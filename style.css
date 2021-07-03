@@ -1,52 +1,58 @@
-*, *::after, *::before{
-    box-sizing: border-box;
-    font-family:sans-serif ;
-    font-weight: normal;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right,#00AAFF,#00FFAc);
+h2{
+  text-align: center;
+  font-weight: 800;
+  color: bisque;
+  text-shadow: 2px 2px 5px black;
 }
-.calculator_grid{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
-
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #00aaff, #00ffac);
+}
+.calculator_grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
 }
 .calculator_grid > button {
-    cursor: pointer;
-    font-size: 20px;
-    border: 1px solid white;
-    outline: none;
-    background-color: rgba(255,255,255,.7);
-
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.7);
 }
-.calculator_grid > button:hover{
-    background-color: rgba(255,255,255,.9);
+.calculator_grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
-.span_two{
-    grid-column: span 2;
+.span_two {
+  grid-column: span 2;
 }
-.output{
-    grid-column: 1/-1;
-    background-color: rgba(0,0,0,.7);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
-.output .preveous_operand{
-    color:rgba(255,255,255,.75);
-    font-size: 16px;
+.output .preveous_operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
 }
 .output .current_operand {
-    color:white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
